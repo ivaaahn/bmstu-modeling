@@ -73,7 +73,11 @@ def generate_x_values(start: float, end: float, step: float = 1e-3):
 )
 def main(distribution: Literal["uniform"] | Literal["exp"]) -> None:
     if distribution not in ("uniform", "exp"):
-        click.secho("\nУкажите верный тип распределения (см. --help)", fg="red", bold=True)
+        click.secho(
+            "\nУкажите верный тип распределения (см. --help)",
+            fg="red",
+            bold=True,
+        )
         return
 
     a = float(input("Введите a: "))
