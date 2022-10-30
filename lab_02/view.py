@@ -103,7 +103,7 @@ class UI:
 
                 cell.config(
                     state="readonly",
-                    readonlybackground="red",
+                    readonlybackground="white",
                 )
                 row.append(cell)
 
