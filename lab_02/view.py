@@ -102,8 +102,8 @@ class UI:
                 cell.grid(column=start_column + j, row=start_row + i)
 
                 cell.config(
-                    state="readonly",
-                    readonlybackground="white",
+                    # state="readonly",
+                    readonlybackground="green",
                 )
                 row.append(cell)
 
@@ -136,7 +136,7 @@ class UI:
                 else:
                     self.RESULT[i][j].config(state="normal")
                     self.RESULT[i][j].delete(0, "end")
-                    self.RESULT[i][j].config(state="readonly")
+                    # self.RESULT[i][j].config(state="readonly")
 
     def _update_state_count(self, count: int) -> None:
         self._update_matrix(count)
@@ -171,4 +171,4 @@ class UI:
                 self.RESULT[i][j].insert(
                     END, "{:.2f}".format(round(result[i][j], 2))
                 )
-                self.RESULT[i][j].config(state="readonly")
+                # self.RESULT[i][j].config(state="readonly")
